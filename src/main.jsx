@@ -1,19 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import Didact from './Didact';
 
-const createElement
-
-const Didact = {
-  createElement,
-};
-
-const element = React.createElement(
+const element = Didact.createElement(
   'div',
   { id: 'foo' },
-  React.createElement('a', null, 'bar'),
-  React.createElement('b')
+  Didact.createElement('a', null, 'bar'),
+  Didact.createElement('b')
 );
 
 const container = document.getElementById('root');
 
-ReactDOM.createRoot(container as HTMLElement).render(element);
+Didact.render(element, container);
