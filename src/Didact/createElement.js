@@ -1,4 +1,4 @@
-const createTextElement = (text) => {
+function createTextElement(text) {
   return {
     type: 'TEXT_ELEMENT',
     props: {
@@ -6,8 +6,9 @@ const createTextElement = (text) => {
       children: [],
     },
   };
-};
-const createElement = (type, props, ...children) => {
+}
+
+function createElement(type, props, ...children) {
   return {
     type,
     props: {
@@ -17,6 +18,6 @@ const createElement = (type, props, ...children) => {
       ),
     },
   };
-};
+}
 
 export default createElement;
